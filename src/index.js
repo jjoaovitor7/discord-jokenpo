@@ -9,9 +9,9 @@ class Jokenpo {
         this.args = args;
     }
 
-    play() {
+    async play() {
         if (this.args == "") {
-            this.message.channel.send(this.failCommandText);
+            await this.message.channel.send(this.failCommandText);
         }
 
         else {
@@ -23,20 +23,20 @@ class Jokenpo {
                 options = ["pedra", "papel", "tesoura"];
             }
 
-            function setWinner(drawText, botWinnerText, userWinnerText) {
+            async function setWinner(drawText, botWinnerText, userWinnerText) {
                 let optionBot = options[Math.floor(Math.random() * 3)];
                 if (optionBot == options[0]) {
-                    this.message.channel.send(drawText);
+                    await this.message.channel.send(drawText);
                     return { player: false, bot: false }
                 }
 
                 if (optionBot == options[1]) {
-                    this.message.channel.send(botWinnerText);
+                    await this.message.channel.send(botWinnerText);
                     return { player: false, bot: true }
                 }
 
                 if (optionBot == options[2]) {
-                    this.message.channel.send(userWinnerText);
+                    await this.message.channel.send(userWinnerText);
                     return { player: true, bot: false }
                 }
             }
@@ -51,7 +51,7 @@ class Jokenpo {
                 return setWinner(this.drawText, this.botWinnerText, this.userWinnerText);
             }
             else {
-                this.message.channel.send(
+                await this.message.channel.send(
                     this.failCommandText
                 );
             }
