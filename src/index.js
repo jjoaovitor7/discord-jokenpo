@@ -11,7 +11,7 @@ class Jokenpo {
 
     play() {
         if (this.args == "") {
-           this.message.channel.send(this.failCommandText);
+            this.message.channel.send(this.failCommandText);
         }
 
         else {
@@ -26,29 +26,32 @@ class Jokenpo {
             function setWinner(drawText, botWinnerText, userWinnerText) {
                 let optionBot = options[Math.floor(Math.random() * 3)];
                 if (optionBot == options[0]) {
-                   this.message.channel.send(drawText);
+                    this.message.channel.send(drawText);
+                    return { player: false, bot: false }
                 }
 
                 if (optionBot == options[1]) {
-                   this.message.channel.send(botWinnerText);
+                    this.message.channel.send(botWinnerText);
+                    return { player: false, bot: true }
                 }
 
                 if (optionBot == options[2]) {
-                   this.message.channel.send(userWinnerText);
+                    this.message.channel.send(userWinnerText);
+                    return { player: true, bot: false }
                 }
             }
 
             if (args[0] == options[0]) {
-                setWinner(this.drawText, this.botWinnerText, this.userWinnerText);
+                return setWinner(this.drawText, this.botWinnerText, this.userWinnerText);
             }
             else if (args[0] == options[1]) {
-                setWinner(this.drawText, this.botWinnerText, this.userWinnerText);
+                return setWinner(this.drawText, this.botWinnerText, this.userWinnerText);
             }
             else if (args[0] == options[2]) {
-                setWinner(this.drawText, this.botWinnerText, this.userWinnerText);
+                return setWinner(this.drawText, this.botWinnerText, this.userWinnerText);
             }
             else {
-               this.message.channel.send(
+                this.message.channel.send(
                     this.failCommandText
                 );
             }
