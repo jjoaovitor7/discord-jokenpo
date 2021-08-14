@@ -23,32 +23,32 @@ class Jokenpo {
                 options = ["pedra", "papel", "tesoura"];
             }
 
-            function setWinner(drawText, botWinnerText, userWinnerText) {
+            function setWinner(message, drawText, botWinnerText, userWinnerText) {
                 let optionSelectedBot = options[Math.floor(Math.random() * 3)];
                 if (optionSelectedBot == options[0]) {
-                    this.message.channel.send(drawText);
+                    message.channel.send(drawText);
                     return { player: false, bot: false }
                 }
 
                 if (optionSelectedBot == options[1]) {
-                    this.message.channel.send(botWinnerText);
+                    message.channel.send(botWinnerText);
                     return { player: false, bot: true }
                 }
 
                 if (optionSelectedBot == options[2]) {
-                    this.message.channel.send(userWinnerText);
+                    message.channel.send(userWinnerText);
                     return { player: true, bot: false }
                 }
             }
 
             if (this.args == options[0]) {
-                return setWinner(this.drawText, this.botWinnerText, this.userWinnerText);
+                return setWinner(this.message, this.drawText, this.botWinnerText, this.userWinnerText);
             }
             else if (this.args == options[1]) {
-                return setWinner(this.drawText, this.botWinnerText, this.userWinnerText);
+                return setWinner(this.message, this.drawText, this.botWinnerText, this.userWinnerText);
             }
             else if (this.args == options[2]) {
-                return setWinner(this.drawText, this.botWinnerText, this.userWinnerText);
+                return setWinner(this.message, this.drawText, this.botWinnerText, this.userWinnerText);
             }
             else {
                 this.message.channel.send(
