@@ -12,7 +12,8 @@
   },
   "keywords": [
     "discord",
-    "jokenpo"
+    "jokenpo",
+    "discord-js"
   ],
   "author": "João Vítor <joaovitorsf7@hotmail.com>",
   "license": "MIT",
