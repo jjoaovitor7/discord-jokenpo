@@ -41,13 +41,13 @@ class Jokenpo {
                 }
             }
 
-            if (args == options[0]) {
+            if (this.args == options[0]) {
                 return setWinner(this.drawText, this.botWinnerText, this.userWinnerText);
             }
-            else if (args == options[1]) {
+            else if (this.args == options[1]) {
                 return setWinner(this.drawText, this.botWinnerText, this.userWinnerText);
             }
-            else if (args == options[2]) {
+            else if (this.args == options[2]) {
                 return setWinner(this.drawText, this.botWinnerText, this.userWinnerText);
             }
             else {
