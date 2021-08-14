@@ -1,0 +1,23 @@
+{
+  "name": "discord-jokenpo",
+  "version": "1.0.0",
+  "description": "Discord Jokenpo.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjoaovitor7/discord-jokenpo.git"
+  },
+  "keywords": [
+    "discord",
+    "jokenpo"
+  ],
+  "author": "João Vítor <joaovitorsf7@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jjoaovitor7/discord-jokenpo/issues"
+  },
+  "homepage": "https://github.com/jjoaovitor7/discord-jokenpo#readme"
+}
