@@ -7,6 +7,8 @@ class Jokenpo {
         this.userWinnerText = userWinnerText;
         this.message = message;
         this.args = args;
+        this.options;
+        this.optionSelectedBot;
     }
 
     play() {
@@ -15,45 +17,76 @@ class Jokenpo {
         }
 
         else {
-            let options;
             if (this.lang == "en") {
-                options = ["rock", "paper", "scissors"];
+                this.options = ["rock", "paper", "scissors"];
             }
             else {
-                options = ["pedra", "papel", "tesoura"];
+                this.options = ["pedra", "papel", "tesoura"];
             }
 
-            function setWinner(message, drawText, botWinnerText, userWinnerText) {
-                let optionSelectedBot = options[Math.floor(Math.random() * 3)];
-                if (optionSelectedBot == options[0]) {
-                    message.channel.send(drawText);
-                    return { player: false, bot: false }
-                }
-
-                if (optionSelectedBot == options[1]) {
-                    message.channel.send(botWinnerText);
-                    return { player: false, bot: true }
-                }
-
-                if (optionSelectedBot == options[2]) {
-                    message.channel.send(userWinnerText);
-                    return { player: true, bot: false }
-                }
+            if (this.args == this.options[0]) {
+                this.optionSelectedBot = this.options[Math.floor(Math.random() * 3)];
+                this.result();
             }
-
-            if (this.args == options[0]) {
-                return setWinner(this.message, this.drawText, this.botWinnerText, this.userWinnerText);
+            else if (this.args == this.options[1]) {
+                this.optionSelectedBot = this.options[Math.floor(Math.random() * 3)];
+                this.result();
             }
-            else if (this.args == options[1]) {
-                return setWinner(this.message, this.drawText, this.botWinnerText, this.userWinnerText);
-            }
-            else if (this.args == options[2]) {
-                return setWinner(this.message, this.drawText, this.botWinnerText, this.userWinnerText);
+            else if (this.args == this.options[2]) {
+                this.optionSelectedBot = this.options[Math.floor(Math.random() * 3)];
+                this.result();
             }
             else {
                 this.message.channel.send(
                     this.failCommandText
                 );
+            }
+        }
+    }
+
+    result() {
+        if (this.args == this.options[0]) {
+            if (this.optionSelectedBot == this.options[1]) {
+                this.message.channel.send(this.botWinnerText);
+                return { player: false, bot: true }
+            }
+            else if (this.optionSelectedBot == this.options[2]) {
+                this.message.channel.send(this.userWinnerText);
+                return { player: true, bot: false }
+            }
+            else {
+                this.message.channel.send(this.drawText);
+                return { player: false, bot: false }
+            }
+        }
+
+        else if (this.args == this.options[1]) {
+            if (this.optionSelectedBot == this.options[0]) {
+                this.message.channel.send(this.userWinnerText);
+                return { player: true, bot: false }
+            }
+            else if (this.optionSelectedBot == this.options[2]) {
+                this.message.channel.send(this.botWinnerText);
+                return { player: false, bot: true }
+            }
+            else {
+                this.message.channel.send(this.drawText);
+                return { player: false, bot: false }
+            }
+        }
+
+        else if (this.args == this.options[2]) {
+            if (this.optionSelectedBot == this.options[0]) {
+                this.message.channel.send(this.botWinnerText);
+                return { player: false, bot: true }
+            }
+            else if (this.optionSelectedBot == this.options[1]) {
+                this.message.channel.send(this.userWinnerText);
+                return { player: true, bot: false }
+            }
+            else {
+                this.message.channel.send(this.drawText);
+                return { player: false, bot: false }
             }
         }
     }

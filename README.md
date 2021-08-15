@@ -9,4 +9,5 @@ Possui suporte em Inglês e Português Brasileiro.
 const _Jokenpo = require("discord-jokenpo");
 const Jokenpo = new _Jokenpo("", "pt-br", "", "", "", message, args[0]);
 Jokenpo.play();
+console.log(Jokenpo.result());
 ```
