@@ -26,6 +26,9 @@
 ### [1.1.7] - 2021-08-15
 - Documentação inicial do código.
 
+### [1.1.75] - 2021-08-15
+- Atualização do `README.md`.
+
 <br />
 
 ## [Unreleased]

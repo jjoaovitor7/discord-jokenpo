@@ -2,7 +2,12 @@
 
 Jokenpo para bots do Discord.
 
-Possui suporte em Inglês e Português Brasileiro.
+Suporta os idiomas Inglês (en) e Português Brasileiro (pt-br).
+
+### Instalação
+```js
+npm install discord-jokenpo
+```
 
 ### Exemplo de uso
 ```js
