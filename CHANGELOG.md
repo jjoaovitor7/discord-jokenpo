@@ -20,6 +20,9 @@
 - Retorno da informação sobre o vencedor para o método `result`.
 - Adição do `CHANGELOG.md`.
 
+### [1.1.6] - 2021-08-15
+- Correção (duplicação de mensagem).
+
 <br />
 
 ## [Unreleased]

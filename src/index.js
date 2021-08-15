@@ -47,47 +47,50 @@ class Jokenpo {
     result() {
         if (this.args == this.options[0]) {
             if (this.optionSelectedBot == this.options[1]) {
-                this.message.channel.send(this.botWinnerText);
                 return { player: false, bot: true }
             }
             else if (this.optionSelectedBot == this.options[2]) {
-                this.message.channel.send(this.userWinnerText);
                 return { player: true, bot: false }
             }
             else {
-                this.message.channel.send(this.drawText);
                 return { player: false, bot: false }
             }
         }
 
         else if (this.args == this.options[1]) {
             if (this.optionSelectedBot == this.options[0]) {
-                this.message.channel.send(this.userWinnerText);
                 return { player: true, bot: false }
             }
             else if (this.optionSelectedBot == this.options[2]) {
-                this.message.channel.send(this.botWinnerText);
                 return { player: false, bot: true }
             }
             else {
-                this.message.channel.send(this.drawText);
                 return { player: false, bot: false }
             }
         }
 
         else if (this.args == this.options[2]) {
             if (this.optionSelectedBot == this.options[0]) {
-                this.message.channel.send(this.botWinnerText);
                 return { player: false, bot: true }
             }
             else if (this.optionSelectedBot == this.options[1]) {
-                this.message.channel.send(this.userWinnerText);
                 return { player: true, bot: false }
             }
             else {
-                this.message.channel.send(this.drawText);
                 return { player: false, bot: false }
             }
+        }
+    }
+
+    send() {
+        if (this.result().player == false && this.result().bot == false) {
+            this.message.channel.send(this.drawText);
+        }
+        else if (this.result().player == true) {
+            this.message.channel.send(this.userWinnerText);
+        }
+        else if (this.result().bot == true) {
+            this.message.channel.send(this.botWinnerText);
         }
     }
 }
