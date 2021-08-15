@@ -23,6 +23,9 @@
 ### [1.1.6] - 2021-08-15
 - Correção (duplicação de mensagem).
 
+### [1.1.7] - 2021-08-15
+- Documentação inicial do código.
+
 <br />
 
 ## [Unreleased]
