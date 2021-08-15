@@ -59,9 +59,9 @@ class Jokenpo {
     }
 
     /**
- * @method Jokenpo.result
- * @returns {Object}
- */
+     * @method Jokenpo.result
+     * @returns {Object}
+     */
     result() {
         if (this.args == this.options[0]) {
             if (this.optionSelectedBot == this.options[1]) {
@@ -101,8 +101,8 @@ class Jokenpo {
     }
 
     /**
- * @method Jokenpo.send
- */
+     * @method Jokenpo.send
+     */
     send() {
         if (this.result().player == false && this.result().bot == false) {
             this.message.channel.send(this.drawText);
