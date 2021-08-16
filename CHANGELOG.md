@@ -29,6 +29,12 @@
 ### [1.1.8] - 2021-08-15
 - Atualização do `README.md`.
 
+### [1.1.9] - 2021-08-16
+- Correção no README.md.
+- Teste unitário inicial.
+- src/ para lib/
+- examples/
+
 <br />
 
 ## [Unreleased]
