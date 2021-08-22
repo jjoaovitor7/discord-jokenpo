@@ -35,6 +35,9 @@
 - src/ para lib/
 - examples/
 
+### [1.1.95] - 2021-08-22
+- Melhorias no código e na documentação do mesmo.
+
 <br />
 
 ## [Unreleased]
