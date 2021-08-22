@@ -12,7 +12,8 @@ npm install discord-jokenpo
 ### Exemplo de uso
 ```js
 const _Jokenpo = require("discord-jokenpo");
-const Jokenpo = new _Jokenpo("Comando falhou.", "pt-br", "Empate.", "Bot ganhou.", "Usuário Ganhou.", message, "pedra");
+let args = "pedra";
+const Jokenpo = new _Jokenpo("Comando falhou.", "pt-br", "Empate.", "Bot ganhou.", "Usuário ganhou.", "Usuário ganhou.", message, args);
 Jokenpo.play();
 Jokenpo.send();
 ```

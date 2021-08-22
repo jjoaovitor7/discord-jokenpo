@@ -38,6 +38,10 @@
 ### [1.1.95] - 2021-08-22
 - Melhorias no código e na documentação do mesmo.
 
+### [1.1.2-beta.0] - 2021-08-22
+- Funcionalidade de 2 Jogadores.
+- Atualização no README.md.
+
 <br />
 
 ## [Unreleased]
