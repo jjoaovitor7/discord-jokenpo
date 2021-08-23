@@ -30,20 +30,23 @@
 - Atualização do `README.md`.
 
 ### [1.1.9] - 2021-08-16
-- Correção no README.md.
+- Correção no `README.md`.
 - Teste unitário inicial.
-- src/ para lib/
-- examples/
+- `src/` para `lib/`
+- `examples/`
 
 ### [1.1.95] - 2021-08-22
 - Melhorias no código e na documentação do mesmo.
 
-### [1.1.2-beta.0] - 2021-08-22
+### [1.2.1-beta.0] - 2021-08-22
 - Funcionalidade de 2 Jogadores.
-- Atualização no README.md.
+- Atualização no `README.md`.
 
-### [1.1.2-beta.1] - 2021-08-22
+### [1.2.1-beta.1] - 2021-08-22
 - Correções e melhorias.
+
+### [1.2.1-beta.15] - 2021-08-22
+- Correção no `CHANGELOG.md`.
 
 <br />
 
