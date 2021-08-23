@@ -42,11 +42,12 @@
 - Funcionalidade de 2 Jogadores.
 - Atualização no `README.md`.
 
-### [1.2.1-beta.1] - 2021-08-22
+### [1.2.1-beta.1 - 1.2.1-beta.15] - 2021-08-22
 - Correções e melhorias.
-
-### [1.2.1-beta.15] - 2021-08-22
 - Correção no `CHANGELOG.md`.
+
+### [1.2.1-beta.21] - 2021-08-23
+- Correções e melhorias.
 
 <br />
 
