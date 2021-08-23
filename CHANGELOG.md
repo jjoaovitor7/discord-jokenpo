@@ -42,6 +42,9 @@
 - Funcionalidade de 2 Jogadores.
 - Atualização no README.md.
 
+### [1.1.2-beta.1] - 2021-08-22
+- Correções e melhorias.
+
 <br />
 
 ## [Unreleased]
