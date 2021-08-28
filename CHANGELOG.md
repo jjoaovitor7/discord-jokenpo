@@ -38,16 +38,12 @@
 ### [1.1.95] - 2021-08-22
 - Melhorias no código e na documentação do mesmo.
 
-### [1.2.1-beta.0] - 2021-08-22
+### [1.2.0] - 2021-08-28
 - Funcionalidade de 2 Jogadores.
+- Correções e melhorias.
 - Atualização no `README.md`.
-
-### [1.2.1-beta.1 - 1.2.1-beta.15] - 2021-08-22
-- Correções e melhorias.
+- Atualização no `test.js`.
 - Correção no `CHANGELOG.md`.
-
-### [1.2.1-beta.21] - 2021-08-23
-- Correções e melhorias.
 
 <br />
 
