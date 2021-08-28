@@ -26,9 +26,8 @@ const messages = {
         cancel: "Partida cancelada.",
     },
     messageTo: {
-        user: "Aqui você digita a opção [pedra | papel | tesoura]`.",
-        opponent: `Um usuário te desafiou para uma partida de jokenpo!
-      Para aceitar é necessário apenas digitar a opção [pedra | papel | tesoura]`,
+        user: "Aqui você digita a opção `[pedra | papel | tesoura]`.",
+        opponent: "Um usuário te desafiou para uma partida de jokenpo!\nPara aceitar é necessário apenas digitar a opção `[pedra | papel | tesoura]`",
         timeout: "O tempo limite é de 60s.",
     },
 };

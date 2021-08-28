@@ -45,6 +45,9 @@
 - Atualização no `test.js`.
 - Correção no `CHANGELOG.md`.
 
+### [1.2.01] - 2021-08-28
+- Pequena correção no `README.md`.
+
 <br />
 
 ## [Unreleased]
