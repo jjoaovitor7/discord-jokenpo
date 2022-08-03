@@ -1,9 +1,9 @@
 # Changelog
 
-### [1.0.0] - 2021-08-14 
+### [1.0.0] - 2021-08-14
 - Versão inicial.
 
-### [1.0.5] - 2021-08-14 
+### [1.0.5] - 2021-08-14
 - Adicionado retorno de informação sobre o vencedor para caso seja necessário pós-verificações sobre o mesmo.
 
 ### [1.0.6] - 2021-08-14
@@ -12,7 +12,7 @@
 ### [1.0.8-1.1.0] - 2021-08-14
 - Correções.
 
-### [1.1.1] - 2021-08-14 
+### [1.1.1] - 2021-08-14
 - Atualização do `README.md`.
 
 ### [1.1.5] - 2021-08-15
@@ -49,8 +49,11 @@
 - Pequena correção no `README.md`.
 - Atualização em `examples/basic.js`.
 
-<br />
+### [1.5.5] - 2022-08-03
+- Refatoração e Correções.
+- Atualização no `README.md`.
+
 
 ## [Unreleased]
-### 1.0.7 - 2021-08-14 
+### 1.0.7 - 2021-08-14
 - Alteração desnecessária.

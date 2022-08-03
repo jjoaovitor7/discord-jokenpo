@@ -27,14 +27,11 @@ const messages = {
     },
 };
 
-const _Jokenpo = require("../lib/index");
+const _Jokenpo = require("../lib/index.js");
 
 function hasValues(result) {
     if (result.hasOwnProperty("player") && result.hasOwnProperty("opponent")) {
-        if (
-            Object.values(result).includes(true) ||
-            Object.values(result).includes(false)
-        ) {
+        if (Object.values(result).includes(true) || Object.values(result).includes(false)) {
             return true;
         }
     } else {
@@ -42,58 +39,28 @@ function hasValues(result) {
     }
 }
 
-function ifPedra() {
-    const Jokenpo = new _Jokenpo(message, "pedra");
+function ptBR(args) {
+    const Jokenpo = new _Jokenpo(message);
     Jokenpo.setMessages(messages);
     Jokenpo.setLang("pt-br");
-    Jokenpo.play();
-    return hasValues(Jokenpo.result());
+    Jokenpo.play(args);
+    const r = Jokenpo.result();
+    return hasValues(r);
 }
 
-function ifPapel() {
-    const Jokenpo = new _Jokenpo(message, "papel");
-    Jokenpo.setMessages(messages);
-    Jokenpo.setLang("pt-br");
-    Jokenpo.play();
-    return hasValues(Jokenpo.result());
-}
-
-function ifTesoura() {
-    const Jokenpo = new _Jokenpo(message, "tesoura");
-    Jokenpo.setMessages(messages);
-    Jokenpo.setLang("pt-br");
-    Jokenpo.play();
-    return hasValues(Jokenpo.result());
-}
-
-function ifRock() {
-    const Jokenpo = new _Jokenpo(message, "rock");
+function en(args) {
+    const Jokenpo = new _Jokenpo(message);
     Jokenpo.setMessages(messages);
     Jokenpo.setLang("en");
-    Jokenpo.play();
-    return hasValues(Jokenpo.result());
+    Jokenpo.play(args);
+    const r = Jokenpo.result();
+    return hasValues(r);
 }
 
-function ifPaper() {
-    const Jokenpo = new _Jokenpo(message, "paper");
-    Jokenpo.setMessages(messages);
-    Jokenpo.setLang("en");
-    Jokenpo.play();
-    return hasValues(Jokenpo.result());
-}
+assert.strictEqual(ptBR("pedra"), true);
+assert.strictEqual(ptBR("papel"), true);
+assert.strictEqual(ptBR("tesoura"), true);
 
-function ifScissors() {
-    const Jokenpo = new _Jokenpo(message, "scissors");
-    Jokenpo.setMessages(messages);
-    Jokenpo.setLang("en");
-    Jokenpo.play();
-    return hasValues(Jokenpo.result());
-}
-
-assert.strictEqual(ifPedra(), true);
-assert.strictEqual(ifPapel(), true);
-assert.strictEqual(ifTesoura(), true);
-
-assert.strictEqual(ifRock(), true);
-assert.strictEqual(ifPaper(), true);
-assert.strictEqual(ifScissors(), true);
+assert.strictEqual(en("rock"), true);
+assert.strictEqual(en("paper"), true);
+assert.strictEqual(en("scissors"), true);

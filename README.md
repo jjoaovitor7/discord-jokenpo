@@ -1,15 +1,15 @@
 # discord-jokenpo
 
+[![discord-jokenpo](https://nodei.co/npm/discord-jokenpo.png)](https://nodei.co/npm/discord-jokenpo/)
+
 Jokenpo para bots do Discord.
 
-Suporta os idiomas Inglês (en) e Português Brasileiro (pt-br).
-
-### Instalação
+## Instalação (npm)
 ```js
-npm install discord-jokenpo
+npm i discord-jokenpo
 ```
 
-### Exemplo de uso
+## Exemplo de uso
 ```js
 const _Jokenpo = require("discord-jokenpo");
 
@@ -34,13 +34,12 @@ const messages = {
 
 let args = "pedra";
 
-const Jokenpo = new _Jokenpo(message, args);
+const Jokenpo = new _Jokenpo(message);
 Jokenpo.setMessages(messages);
+// Jokenpo.setLang("en");
 Jokenpo.setLang("pt-br");
 
-try {
-    Jokenpo.play().then(() => {
-        Jokenpo.send();
-    });
-} catch (TypeError) { }
+Jokenpo.play(args).then(() => {
+    Jokenpo.send();
+}).catch(console.error);
 ```

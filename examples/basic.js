@@ -29,8 +29,8 @@ const messages = {
 };
 
 let args = "pedra";
-const Jokenpo = new _Jokenpo(message, args);
+const Jokenpo = new _Jokenpo(message);
 Jokenpo.setMessages(messages);
 Jokenpo.setLang("pt-br");
-Jokenpo.play();
+Jokenpo.play(args);
 Jokenpo.send();
