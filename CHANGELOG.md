@@ -53,6 +53,8 @@
 - Refatoração e Correções.
 - Atualização no `README.md`.
 
+### [1.5.8] - 2022-08-04
+- Refatoração e Correções.
 
 ## [Unreleased]
 ### 1.0.7 - 2021-08-14
