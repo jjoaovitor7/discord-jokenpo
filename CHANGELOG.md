@@ -3,30 +3,16 @@
 ### [1.0.0] - 2021-08-14
 - Versão inicial.
 
-### [1.0.5] - 2021-08-14
+### [1.0.5-1.1.1] - 2021-08-14
 - Adicionado retorno de informação sobre o vencedor para caso seja necessário pós-verificações sobre o mesmo.
-
-### [1.0.6] - 2021-08-14
 - Correção.
-
-### [1.0.8-1.1.0] - 2021-08-14
-- Correções.
-
-### [1.1.1] - 2021-08-14
 - Atualização do `README.md`.
 
-### [1.1.5] - 2021-08-15
-- Correção.
+### [1.1.5-1.1.8] - 2021-08-15
 - Retorno da informação sobre o vencedor para o método `result`.
 - Adição do `CHANGELOG.md`.
-
-### [1.1.6] - 2021-08-15
-- Correção (duplicação de mensagem).
-
-### [1.1.7] - 2021-08-15
+- Correções (duplicação de mensagem).
 - Documentação inicial do código.
-
-### [1.1.8] - 2021-08-15
 - Atualização do `README.md`.
 
 ### [1.1.9] - 2021-08-16
@@ -38,24 +24,13 @@
 ### [1.1.95] - 2021-08-22
 - Melhorias no código e na documentação do mesmo.
 
-### [1.2.0] - 2021-08-28
+### [1.2.0-1.2.11] - 2021-08-28
 - Funcionalidade de 2 Jogadores.
 - Correções e melhorias.
-- Atualização no `README.md`.
-- Atualização no `test.js`.
+- Atualização em `README.md`, `test.js` e `examples/basic.js`.
 - Correção no `CHANGELOG.md`.
 
-### [1.2.11] - 2021-08-28
-- Pequena correção no `README.md`.
-- Atualização em `examples/basic.js`.
-
-### [1.5.5] - 2022-08-03
+### [1.5.5-1.6.0] - 2022-08-05
 - Refatoração e Correções.
-- Atualização no `README.md`.
-
-### [1.5.8] - 2022-08-04
-- Refatoração e Correções.
-
-## [Unreleased]
-### 1.0.7 - 2021-08-14
-- Alteração desnecessária.
+- Atualização em `README.md` e `test/test.js`.
+- `examples/` removido.

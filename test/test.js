@@ -1,14 +1,18 @@
 const assert = require("assert");
 const message = {
+    mentions: {
+        users: {
+            first() { },
+        }
+    },
     channel: {
-        send(message) {
-            console.log(message);
-        },
+        send(m) { },
     },
 };
 
 const messages = {
-    fail: "Tente jj jokenpo `[pedra|papel|tesoura]`.\nex.: `jj jokenpo pedra`",
+    fail: `Tente jj jokenpo \`[pedra|papel|tesoura]\`.
+ex.: \`jj jokenpo pedra\``,
     gameResults: {
         draw: "Empate!",
         botWinner: "O bot ganhou.",
@@ -22,12 +26,12 @@ const messages = {
     messageTo: {
         user: "Aqui você digita a opção [pedra | papel | tesoura]`.",
         opponent: `Um usuário te desafiou para uma partida de jokenpo!
-      Para aceitar é necessário apenas digitar a opção [pedra | papel | tesoura]`,
+Para aceitar é necessário apenas digitar a opção [pedra | papel | tesoura]`,
         timeout: "O tempo limite é de 60s.",
     },
 };
 
-const _Jokenpo = require("../lib/index.js");
+const J = require("../lib/index.js");
 
 function hasValues(result) {
     if (result.hasOwnProperty("player") && result.hasOwnProperty("opponent")) {
@@ -40,27 +44,31 @@ function hasValues(result) {
 }
 
 function ptBR(args) {
-    const Jokenpo = new _Jokenpo(message);
-    Jokenpo.setMessages(messages);
-    Jokenpo.setLang("pt-br");
+    const Jokenpo = new J(message);
+    Jokenpo.setConfig(messages, "pt-br");
     Jokenpo.play(args);
     const r = Jokenpo.result();
     return hasValues(r);
 }
 
 function en(args) {
-    const Jokenpo = new _Jokenpo(message);
-    Jokenpo.setMessages(messages);
-    Jokenpo.setLang("en");
+    const Jokenpo = new J(message);
+    Jokenpo.setConfig(messages, "en");
     Jokenpo.play(args);
     const r = Jokenpo.result();
     return hasValues(r);
 }
 
-assert.strictEqual(ptBR("pedra"), true);
-assert.strictEqual(ptBR("papel"), true);
-assert.strictEqual(ptBR("tesoura"), true);
+try {
+    assert.strictEqual(ptBR("pedra"), true);
+    assert.strictEqual(ptBR("papel"), true);
+    assert.strictEqual(ptBR("tesoura"), true);
 
-assert.strictEqual(en("rock"), true);
-assert.strictEqual(en("paper"), true);
-assert.strictEqual(en("scissors"), true);
+    assert.strictEqual(en("rock"), true);
+    assert.strictEqual(en("paper"), true);
+    assert.strictEqual(en("scissors"), true);
+    console.log("\x1b[32mOs testes passaram.\x1b[0m");
+} catch (err) {
+    console.log(err);
+    console.log("\x1b[31mOs testes não passaram.\x1b[0m");
+}
