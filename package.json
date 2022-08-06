@@ -1,6 +1,6 @@
 {
   "name": "discord-jokenpo",
-  "version": "1.6.0",
+  "version": "1.6.5",
   "description": "Jokenpo para bots do Discord.",
   "main": "lib/index.js",
   "scripts": {

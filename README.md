@@ -17,12 +17,6 @@ const J = require("discord-jokenpo");
 
 const messages = {
   fail: "Tente jj jokenpo `[pedra|papel|tesoura]`.\nex.: `jj jokenpo pedra`",
-  gameResults: {
-    draw: "Empate!",
-    botWinner: "O bot ganhou.",
-    opponentWinner: "O oponente ganhou.",
-    userWinner: "O usuário ganhou.",
-  },
   gameStatus: {
     inProgress: "Partida iniciada ou há uma partida em andamento.",
     cancel: "Partida cancelada.",
@@ -42,8 +36,14 @@ client.on("messageCreate", async (message) => {
 
   Jokenpo.play("pedra")
     .then(() => {
-      Jokenpo.send();
-    })
-    .catch(console.error);
+      const r = Jokenpo.result();
+        if (r.player === false && r.bot === false) {
+            message.channel.send(`Empate!`);
+        } else if (r.bot === true) {
+            message.channel.send(`<@${client.user.id}> ganhou..`);
+        } else if (r.player === true) {
+            message.channel.send(`<@${message.author.id}> ganhou.`);
+        }
+    }).catch(console.error);
 });
 ```

@@ -13,12 +13,6 @@ const message = {
 const messages = {
     fail: `Tente jj jokenpo \`[pedra|papel|tesoura]\`.
 ex.: \`jj jokenpo pedra\``,
-    gameResults: {
-        draw: "Empate!",
-        botWinner: "O bot ganhou.",
-        opponentWinner: "O oponente ganhou.",
-        userWinner: "O usuário ganhou.",
-    },
     gameStatus: {
         inProgress: "Partida iniciada ou há uma partida em andamento.",
         cancel: "Partida cancelada.",
@@ -34,7 +28,8 @@ Para aceitar é necessário apenas digitar a opção [pedra | papel | tesoura]`,
 const J = require("../lib/index.js");
 
 function hasValues(result) {
-    if (result.hasOwnProperty("player") && result.hasOwnProperty("opponent")) {
+    if ((result.hasOwnProperty("player") && result.hasOwnProperty("bot"))
+        || (result.hasOwnProperty("player1") && result.hasOwnProperty("player2"))) {
         if (Object.values(result).includes(true) || Object.values(result).includes(false)) {
             return true;
         }
