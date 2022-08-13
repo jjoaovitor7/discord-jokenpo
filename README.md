@@ -40,7 +40,7 @@ client.on("messageCreate", async (message) => {
         if (r.player === false && r.bot === false) {
             message.channel.send(`Empate!`);
         } else if (r.bot === true) {
-            message.channel.send(`<@${client.user.id}> ganhou..`);
+            message.channel.send(`<@${client.user.id}> ganhou.`);
         } else if (r.player === true) {
             message.channel.send(`<@${message.author.id}> ganhou.`);
         }

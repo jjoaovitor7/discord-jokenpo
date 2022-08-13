@@ -30,7 +30,7 @@
 - Atualização em `README.md`, `test.js` e `examples/basic.js`.
 - Correção no `CHANGELOG.md`.
 
-### [1.5.5-1.6.5] - 2022-08-05
+### [1.5.5-1.6.65] - 2022-08-05
 - Refatoração e Correções.
 - Atualização em `README.md` e `test/test.js`.
 - `examples/` removido.
